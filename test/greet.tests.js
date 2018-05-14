@@ -3,7 +3,7 @@ it("should be able to count names greeted.", function(){
   var greetings = Greetings();
   greetings.funcGreet("Amanda");
   greetings.funcGreet("Babalwa");
-  greetings.funcGreet("Adre");
+  greetings.funcGreet("Andre");
   assert.equal(greetings.counter(),3);
 });
 it("should not count the name if it is there already.", function(){
