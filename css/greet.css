@@ -12,20 +12,15 @@ body{
 .count{
 margin-left: 400px;
 border-color: red;
+font-size: 20px;
 }
-.greetMe{
+.reset{
 margin-left: 360px;
 }
-/* .greeting{
-  height: 50px;
-  width: 190px;
-  border: solid orange;
-  margin-left: 38%;
-  margin-top: 100px;
-  margin-bottom: 50px
-} */
-/* .button-primary{
-  width: 200px;
-  height:50px;
-  margin-left: 35%;
-} */
+.languageRadio{
+  /* padding: 2px; */
+  font-size: 20px;
+}
+span{
+  font-size: 20px;
+}
