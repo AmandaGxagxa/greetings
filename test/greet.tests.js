@@ -17,19 +17,19 @@ it("should be able to greet the the name of the person in english.", function(){
   var greetings = Greetings();
   greetings.funcGreet("Amanda",greetings.language("english"));
   //greetings.funcGreet('english,');
-  assert.equal(greetings.msgGet(),'Hello, Amanda',);
+  assert.equal(greetings.msgGet(),'HELLO, Amanda!',);
 });
 it("should be able to greet the the name of the person in Xhosa", function(){
   var greetings = Greetings();
   greetings.funcGreet("Amanda",greetings.language("isiXhosa"));
   //greetings.funcGreet('english,');
-  assert.equal( greetings.msgGet(),'Molo, Amanda',);
+  assert.equal( greetings.msgGet(),'MOLO, Amanda!',);
 });
 it("should be able to greet the the name of the person in Afrikaans.", function(){
   var greetings = Greetings();
   greetings.funcGreet("Amanda",greetings.language("afrikaans"));
   //greetings.funcGreet('english,');
-  assert.equal( greetings.msgGet(),'Hallo, Amanda',);
+  assert.equal( greetings.msgGet(),'HALLO, Amanda!',);
   });
 
 });
