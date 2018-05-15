@@ -9,8 +9,9 @@ var storedata = localStorage.getItem('StoredNames') ? JSON.parse(localStorage.ge
 
 var greetings = Greetings(storedata);
 
-counterElem.innerHTML = greetings.counter();
 
+counterElem.innerHTML = greetings.counter();
+  counterElem.style.color = "orange";
 greetMeBtn.addEventListener('click', function() {
   if (inputName.value !== "") {
 
@@ -18,10 +19,10 @@ greetMeBtn.addEventListener('click', function() {
     if (checkedRadioBtn) {
       greetings.language(checkedRadioBtn.value)
     }
-    greetings.funcGreet(inputName.value);
+    greetings.funcGreet(inputName.value.toUpperCase());
     console.log(inputName.value)
     getNameElem.innerHTML = greetings.msgGet();
-    getNameElem.style.color = "blue";
+    getNameElem.style.color = "maroon";
     counterElem.innerHTML = greetings.counter();
     counterElem.style.color = "orange";
     localStorage.setItem('StoredNames', JSON.stringify(greetings.getMap()));

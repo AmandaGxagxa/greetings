@@ -11,11 +11,11 @@ function Greetings(StoredNames) {
       }
     }
     if (lang == "english") {
-      msg = "Hello, " + name;
+      msg = "HELLO, " + name + "!";
     } else if (lang == "afrikaans") {
-      msg = "Hallo, " + name;
+      msg = "HALLO, " + name + "!" ;
     } else if (lang == "isiXhosa") {
-      msg = "Molo, " + name;
+      msg = "MOLO, " + name + "!";
     }
   }
 
