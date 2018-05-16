@@ -13,6 +13,12 @@ it("should not count the name if it is there already.", function(){
   greetings.funcGreet("Amanda");
   assert.equal(greetings.counter(),2);
 });
+it("should not count the name if it is there already.", function(){
+  var greetings = Greetings({"Amanda":0 ,"grey":0});
+  //greetings.funcGreet("Amanda");
+  assert.equal(greetings.counter(), 2);
+});
+
 it("should be able to greet the the name of the person in english.", function(){
   var greetings = Greetings();
   greetings.funcGreet("Amanda",greetings.language("english"));

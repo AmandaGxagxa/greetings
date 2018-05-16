@@ -12,30 +12,45 @@ var greetings = Greetings(storedata);
 
 counterElem.innerHTML = greetings.counter();
   counterElem.style.color = "orange";
-  resetBtn.addEventListener('click', function() {
-    localStorage.clear();
-    greetings.resetNames();
-    //locator.reload();
-  })
+resetBtn.addEventListener('click', function() {
+  window.localStorage.clear();
+  greetings.resetNames();
+//  greetings.resetCounter();
+  counterElem.innerHTML = greetings.counter();
+  //locator.reload();
+})
 greetMeBtn.addEventListener('click', function() {
-  if (inputName.value !== "") {
-
-    var checkedRadioBtn = document.querySelector("input[name='language']:checked");
-    if (checkedRadioBtn) {
-      greetings.language(checkedRadioBtn.value)
-    }
-    greetings.funcGreet(inputName.value.toUpperCase());
-    console.log(inputName.value)
-    getNameElem.innerHTML = greetings.msgGet();
-    getNameElem.style.color = "maroon";
-    counterElem.innerHTML = greetings.counter();
-    counterElem.style.color = "orange";
-    localStorage.setItem('StoredNames', JSON.stringify(greetings.getMap()));
 
 
-  } else {
-    getNameElem.innerHTML = "this is not valid name!"
-    getNameElem.style.color = "red";
+
+  var checkedRadioBtn = document.querySelector("input[name='language']:checked");
+  if (checkedRadioBtn) {
+    greetings.language(checkedRadioBtn.value)
   }
+  else{
+    // alert("!")
+    getNameElem.innerHTML = "Please Select Language";
+    getNameElem.style.color = "maroon";
+    return;
+
+  }
+  greetings.funcGreet(inputName.value.toUpperCase());
+  console.log(inputName.value)
+  getNameElem.innerHTML = greetings.msgGet();
+  getNameElem.style.color = "maroon";
+  counterElem.innerHTML = greetings.counter();
+  counterElem.style.color = "orange";
+  localStorage.setItem('StoredNames', JSON.stringify(greetings.getMap()));
+
+
+  if (inputName.value === ""){
+    getNameElem.innerHTML = 'Enter name'
+  }
+  if (isNaN(inputName.value)) {
+    getNameElem.innerHTML = greetings.msgGet();
+  } else {
+    getNameElem.innerHTML = 'Please enter a valid name'
+  }
+
 
 });

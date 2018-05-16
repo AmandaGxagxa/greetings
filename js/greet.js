@@ -37,6 +37,9 @@ function Greetings(StoredNames) {
   function returnGreet() {
     return greetMe;
   }
+  function resetCount() {
+      counter = 0;
+  }
 
   function resetData() {
     return nameMap = {};
@@ -47,6 +50,7 @@ function Greetings(StoredNames) {
     counter: countNum,
     language: setLang,
     getMap: map,
-    resetNames: resetData
+    resetNames: resetData,
+    resetCounter :resetCount
   }
 }
