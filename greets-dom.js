@@ -31,6 +31,7 @@ greetMeBtn.addEventListener('click', function() {
     // alert("!")
     getNameElem.innerHTML = "Please Select Language";
     getNameElem.style.color = "maroon";
+
     return;
 
   }
@@ -51,6 +52,5 @@ greetMeBtn.addEventListener('click', function() {
   } else {
     getNameElem.innerHTML = 'Please enter a valid name'
   }
-
-
+  inputName.value = "";
 });

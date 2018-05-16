@@ -9,14 +9,19 @@ body{
 .container{
   border: solid black;
     background: grey;
+    border-radius: 20px;
 }
+.greetings{
+  font-weight: bold;
+}
+
 .count{
 margin-left: 400px;
 border-color: red;
 font-size: 20px;
 }
 .reset{
-margin-left: 360px;
+margin-left: 320px;
 }
 .languageRadio{
   /* padding: 2px; */
@@ -24,8 +29,9 @@ margin-left: 360px;
 }
 span{
   font-size: 30px;
+  font-weight:bold;
 }
 h2{
   color: maroon;
-  font-weight: bold;
+  background-color: black;
 }
