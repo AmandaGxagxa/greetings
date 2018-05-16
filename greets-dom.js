@@ -17,6 +17,7 @@ resetBtn.addEventListener('click', function() {
   greetings.resetNames();
 //  greetings.resetCounter();
   counterElem.innerHTML = greetings.counter();
+  getNameElem.innerHTML ="";
   //locator.reload();
 })
 greetMeBtn.addEventListener('click', function() {
