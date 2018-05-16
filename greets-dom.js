@@ -12,6 +12,11 @@ var greetings = Greetings(storedata);
 
 counterElem.innerHTML = greetings.counter();
   counterElem.style.color = "orange";
+  resetBtn.addEventListener('click', function() {
+    localStorage.clear();
+    greetings.resetNames();
+    //locator.reload();
+  })
 greetMeBtn.addEventListener('click', function() {
   if (inputName.value !== "") {
 
@@ -26,11 +31,7 @@ greetMeBtn.addEventListener('click', function() {
     counterElem.innerHTML = greetings.counter();
     counterElem.style.color = "orange";
     localStorage.setItem('StoredNames', JSON.stringify(greetings.getMap()));
-    resetBtn.addEventListener('click', function() {
-      localStorage.clear();
-      greetings.resetNames();
-      //locator.reload();
-    })
+
 
   } else {
     getNameElem.innerHTML = "this is not valid name!"
